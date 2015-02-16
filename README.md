@@ -1,10 +1,12 @@
 # Introduction
-__[Chrome-DM](http://chrome-dm.appspot.com/) is live on AppEngine!__
+__[Cellabus-Chrome](http://cellabus-chrome.appspot.com/) is live on AppEngine!__
+
+Forked from https://github.com/ottiferous/Chrome-DM
 
 ## Background
 Currently there is a lack of accessible information for Enterprise Hardware. Over half of the fields are not available using the Chrome Management dashboard, and exporting device information (serial numbers, user, location, OU, etc.) is absent. This leaves customers with large numbers of devices unable to manage an enterprise fleet of Chromebooks.
 
-Leveraging available APIs to retrive information about all Chromebooks enrolled to a domain the application will be able to aggregate all of the available information for admins into a lightweight CSV. 
+Leveraging available APIs to retrive information about all Chromebooks enrolled to a domain the application will be able to aggregate all of the available information for admins into a lightweight CSV.
 
 ## Design Goals
 Existing on the Google AppEngine cloud platform allows for scalability and accessiblity across all users of the Enterprise Management feature of Google Apps with Chrome devices. Keeping the code in a central location prevents the need to install and run the source code locally.
@@ -38,12 +40,12 @@ Edited for readabiliy
 
 ```
 {
-	u'status': 				u'ACTIVE', 
-	u'lastSync': 			u'2013-01-16T23:52:13.487Z', 
-	u'kind': 				u'admin#directory#chromeosdevice', 
-	u'lastEnrollmentTime': 	u'2013-01-16T23:46:04.757Z', 
+	u'status': 				u'ACTIVE',
+	u'lastSync': 			u'2013-01-16T23:52:13.487Z',
+	u'kind': 				u'admin#directory#chromeosdevice',
+	u'lastEnrollmentTime': 	u'2013-01-16T23:46:04.757Z',
 	u'serialNumber': 		u'HY3A91ECB17898',
-	u'deviceId': 			u'ca34540c-ede5-4529-88b5-9b3214737db6', 
+	u'deviceId': 			u'ca34540c-ede5-4529-88b5-9b3214737db6',
 	u'orgUnitPath': 		u'/'
 }
 ```
@@ -106,7 +108,3 @@ Here users will be able to see the stats displayed and click on a button to down
 ### Users without API service
 The 3-legged OAuth will trigger like any other user - but they will get a 400 error when the API call is made. This will cause a new page to be shown with the error message and links to possible solutions - like enabling API access for the domain.
 
----
-
-## Licensing
-The source code for this project is provided for use under the [MIT license](https://github.com/ottiferous/Chrome-DM/blob/master/MIT%20License.txt)

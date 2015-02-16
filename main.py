@@ -1,21 +1,8 @@
-# Clean up these imports. I don't think half of them need to run.
-
-import httplib2
 import logging
-import pprint
 import webapp2
 
 import os            
 import jinja2
-
-from apiclient.discovery import build
-from google.appengine.ext import webapp
-from oauth2client.file import Storage
-from oauth2client.appengine import OAuth2Decorator
-from oauth2client.appengine import OAuth2DecoratorFromClientSecrets
-from oauth2client.client import AccessTokenRefreshError
-from oauth2client.client import flow_from_clientsecrets
-from oauth2client.tools import run
 
 # LocalFiles
 
